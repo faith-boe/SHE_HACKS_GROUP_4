@@ -1,2 +1,1 @@
-# SHE_HACKS_GROUP_4
-Project for group 4
+# SHA-Group-4-Project# SHE_HACKS_GROUP_4
