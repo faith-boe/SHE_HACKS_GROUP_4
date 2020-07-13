@@ -51,10 +51,20 @@
             </div>
         </header>
         <!-- About-->
+        
+        
         <section class="page-section bg-primary" id="about">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
+                    <div class="col-lg-6 video">
+                    <div class="video"><video controls loop width="100%" autoplay>
+                        <source src="./assets/INTERACTIVE Science Class (1).mp4" type="video/mp4">
+                        <source src="movie.ogg" type="video/ogg">
+                      Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
                         <h2 class="text-white mt-0">We've got what you need!</h2>
                         <hr class="divider light my-4" />
                         <p class="text-white-50 mb-4">Alpha Geeks has everything you need to come out with flying colors on your science examinations. Interactive videos and quizes are there to make the learning experience more fun and effective. Real live tutors are also available to clarify areas of difficulties any individual may be having.</p>
@@ -68,18 +78,23 @@
         <section class="page-section" id="services">
             <div class="container">
                 <h2 class="text-center mt-0" id="login">Log In/Sign Up</h2>
-                <hr class="divider my-4" />
+                <hr class="divider my-2" />
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 text-center">
+                    <div class="col-lg-6 col-md-12 text-center">
                         <div class="mt-5">
                             <i class="fas fa-4x fa-gem text-primary mb-4"></i>
                             <h3 class="h4 mb-2">Already Have  An Account? Log In</h3>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signIn">
+                                Sign in
+                            </button>
+
                             <p class="text-muted mb-0">Log in to your Alpha Geeks account using your unique Geek ID</p>
                         </div>
                     </div>
                         
 
-                    <div class="col-lg-3 col-md-6 text-center">
+                    <div class="col-lg-6 col-md-12 text-center">
                         <div class="mt-5">
                             <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
                             <h3 class="h4 mb-2">New User? Sign Up</h3>
@@ -97,7 +112,7 @@
                     <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
                   </div>
                   <div class="col-12 col-md-3">
-                    <button type="submit" href= "./sign_up.html" class="btn btn-block btn-lg btn-primary">Sign up!</button>
+                    <a type="submit" href= "./sign_up.html" class="btn btn-block btn-lg btn-primary">Sign up!</a>
                   </div>
                 </div>
               </form>
@@ -179,5 +194,53 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+            var docWidth = document.documentElement.offsetWidth;
+          
+            [].forEach.call(
+              document.querySelectorAll('*'),
+              function(el) {
+                if (el.offsetWidth > docWidth) {
+                  console.log(el);
+                }
+              }
+            );
+          </script>
+          
+  
+  <!-- Modal -->
+  <div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
     </body>
 </html>
